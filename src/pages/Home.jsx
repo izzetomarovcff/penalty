@@ -31,7 +31,7 @@ function Home() {
                     <img src="icon/play.svg" alt="" />
                 </Link>
                 <div className='requests'>
-                    <Link to={"mines/requests"} className='btn btn-warning req'>
+                    <Link to={"/mines/requests"} className='btn btn-warning req'>
                         İstəklər
                     </Link>
                 </div>
@@ -45,7 +45,21 @@ function Home() {
                     <img src="icon/play.svg" alt="" />
                 </Link>
                 <div className='requests'>
-                    <Link to={"aviator/requests"} className='btn btn-warning req'>
+                    <Link to={"/aviator/requests"} className='btn btn-warning req'>
+                        İstəklər
+                    </Link>
+                </div>
+            </div>
+            <div className="game card shadow imgdiv rounded">
+                <img src="image/mrthimble.jpg" alt="" className='rounded' />
+                <Link to={"/mrthimble/settings"} className='settings'>
+                    <img src="icon/settings.svg" alt="" />
+                </Link>
+                <Link to={"/mrthimble/play"} className='play'>
+                    <img src="icon/play.svg" alt="" />
+                </Link>
+                <div className='requests'>
+                    <Link to={"/mrthimble/requests"} className='btn btn-warning req'>
                         İstəklər
                     </Link>
                 </div>

@@ -16,6 +16,9 @@ import Penaltyrequests from './pages/Penalty/Penaltyrequests';
 import Aviatorsettings from './pages/Aviator/Aviatorsettings';
 import Aviatorgame from './pages/Aviator/Aviatorgame';
 import Aviatorrequests from './pages/Aviator/Aviatorrequests';
+import Mrthimblesettings from './pages/Mrthimble/Mrthimblesettings';
+import Mrthimblegame from './pages/Mrthimble/Mrthimblegame';
+import Mrthimblerequests from './pages/Mrthimble/Mrthimblerequests';
 
 
 function App() {
@@ -38,6 +41,10 @@ function App() {
           <Route path='/aviator/settings' element={<Aviatorsettings/>}/>
           <Route path='/aviator/play' element={<Aviatorgame/>}/>
           <Route path='/aviator/requests' element={<Aviatorrequests/>}/>
+
+          <Route path='/mrthimble/settings' element={<Mrthimblesettings/>}/>
+          <Route path='/mrthimble/play' element={<Mrthimblegame/>}/>
+          <Route path='/mrthimble/requests' element={<Mrthimblerequests/>}/>
 
 
         </Route>
