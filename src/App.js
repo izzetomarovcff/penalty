@@ -4,19 +4,19 @@ import './App.css';
 import Login from './pages/Login';
 import {Route, Routes } from 'react-router-dom';
 import Accessdenied from './pages/Accessdenied';
-import Notfound from './pages/Notfound';
 import PrivateRoute from './privateroutes/PrivateRoute';
 import PrivateRouteHome from './privateroutes/PrivateRouteHome';
 import Home from './pages/Home';
-import Penaltysettings from './pages/Penaltysettings';
-import Penaltygame from './pages/Penaltygame';
-import Minessettings from './pages/Minessettings';
-import Minesgame from './pages/Minesgame';
-import Minesrequests from './pages/Minesrequests';
-import Penaltyrequests from './pages/Penaltyrequests';
-import Aviatorrequests from './pages/Aviatorrequests';
-import Aviatorgame from './pages/Aviatorgame';
-import Aviatorsettings from './pages/Aviatorsettings';
+import Penaltysettings from './pages/Penalty/Penaltysettings';
+import Penaltygame from './pages/Penalty/Penaltygame';
+import Minessettings from './pages/Mines/Minessettings';
+import Minesgame from './pages/Mines/Minesgame';
+import Minesrequests from './pages/Mines/Minesrequests';
+import Penaltyrequests from './pages/Penalty/Penaltyrequests';
+import Aviatorsettings from './pages/Aviator/Aviatorsettings';
+import Aviatorgame from './pages/Aviator/Aviatorgame';
+import Aviatorrequests from './pages/Aviator/Aviatorrequests';
+
 
 function App() {
   return (
@@ -38,7 +38,6 @@ function App() {
           <Route path='/aviator/settings' element={<Aviatorsettings/>}/>
           <Route path='/aviator/play' element={<Aviatorgame/>}/>
           <Route path='/aviator/requests' element={<Aviatorrequests/>}/>
-
 
 
         </Route>
