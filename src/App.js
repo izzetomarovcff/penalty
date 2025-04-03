@@ -14,6 +14,9 @@ import Minessettings from './pages/Minessettings';
 import Minesgame from './pages/Minesgame';
 import Minesrequests from './pages/Minesrequests';
 import Penaltyrequests from './pages/Penaltyrequests';
+import Aviatorrequests from './pages/Aviatorrequests';
+import Aviatorgame from './pages/Aviatorgame';
+import Aviatorsettings from './pages/Aviatorsettings';
 
 function App() {
   return (
@@ -24,14 +27,19 @@ function App() {
         <Route element={<PrivateRouteHome />}>
           <Route path='/' element={<Home/>}/>
 
-          <Route path='/penalty/play' element={<Penaltygame/>}/>
           <Route path='/penalty/settings' element={<Penaltysettings/>}/>
+          <Route path='/penalty/play' element={<Penaltygame/>}/>
+          <Route path='/penalty/requests' element={<Penaltyrequests/>}/>
           
-          <Route path='/mines/play' element={<Minesgame/>}/>
           <Route path='/mines/settings' element={<Minessettings/>}/>
+          <Route path='/mines/play' element={<Minesgame/>}/>
+          <Route path='/mines/requests' element={<Minesrequests/>}/>
 
-          <Route path='mines/requests' element={<Minesrequests/>}/>
-          <Route path='penalty/requests' element={<Penaltyrequests/>}/>
+          <Route path='/aviator/settings' element={<Aviatorsettings/>}/>
+          <Route path='/aviator/play' element={<Aviatorgame/>}/>
+          <Route path='/aviator/requests' element={<Aviatorrequests/>}/>
+
+
 
         </Route>
         <Route path='*' element={<Accessdenied/>}/>

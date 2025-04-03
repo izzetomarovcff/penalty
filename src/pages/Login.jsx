@@ -14,7 +14,6 @@ function Login() {
           ...prevState,
           [name]: value
         }))
-        console.log(formData)
       }
       const handleLogIn = async()=>{
         try{

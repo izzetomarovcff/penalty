@@ -36,6 +36,20 @@ function Home() {
                     </Link>
                 </div>
             </div>
+            <div className="game card shadow imgdiv rounded">
+                <img src="image/aviator.jpg" alt="" className='rounded' />
+                <Link to={"/aviator/settings"} className='settings'>
+                    <img src="icon/settings.svg" alt="" />
+                </Link>
+                <Link to={"/aviator/play"} className='play'>
+                    <img src="icon/play.svg" alt="" />
+                </Link>
+                <div className='requests'>
+                    <Link to={"aviator/requests"} className='btn btn-warning req'>
+                        İstəklər
+                    </Link>
+                </div>
+            </div>
         </div>
     )
 }
