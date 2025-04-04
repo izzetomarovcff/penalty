@@ -30,7 +30,9 @@ function Mrthimblerequests() {
         try {
             const response = await fetch("https://moccha77-fbe81-default-rtdb.firebaseio.com/mrthimbleusers.json")
             const data = await response.json()
+            console.log(data)
             setData(data)
+
         } catch (error) {
             console.log(error)
         }
@@ -53,7 +55,7 @@ function Mrthimblerequests() {
     }
     return (
         <div className='requestpage'>
-            <h2 className='mt-2'>Mrthimble İsəklər</h2>
+            <h2 className='mt-2'>Mrthimble İstəklər</h2>
             {data ? (
                 <div className="reqdiv rounded shadow border">
                     {Object.entries(data).map(([index, user]) => {

@@ -53,7 +53,7 @@ function Minesrequests() {
     }
     return (
         <div className='requestpage'>
-            <h2 className='mt-2'>Mines İsəklər</h2>
+            <h2 className='mt-2'>Mines İstəklər</h2>
             {data ? (
                 <div className="reqdiv rounded shadow border">
                     {Object.entries(data).map(([index, user]) => {
