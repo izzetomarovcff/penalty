@@ -19,6 +19,9 @@ import Aviatorrequests from './pages/Aviator/Aviatorrequests';
 import Mrthimblesettings from './pages/Mrthimble/Mrthimblesettings';
 import Mrthimblegame from './pages/Mrthimble/Mrthimblegame';
 import Mrthimblerequests from './pages/Mrthimble/Mrthimblerequests';
+import Highflyersettings from './pages/Highflyer/Highflyersettings';
+import Highflyergame from './pages/Highflyer/Highflyergame';
+import Highflyerrequests from './pages/Highflyer/Highflyerrequests';
 
 
 function App() {
@@ -45,6 +48,10 @@ function App() {
           <Route path='/mrthimble/settings' element={<Mrthimblesettings/>}/>
           <Route path='/mrthimble/play' element={<Mrthimblegame/>}/>
           <Route path='/mrthimble/requests' element={<Mrthimblerequests/>}/>
+
+          <Route path='/highflyer/settings' element={<Highflyersettings/>}/>
+          <Route path='/highflyer/play' element={<Highflyergame/>}/>
+          <Route path='/highflyer/requests' element={<Highflyerrequests/>}/>
 
 
         </Route>

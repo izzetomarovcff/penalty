@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-function Aviatorsettings() {
+function Highflyersettings() {
   const [data, setData] = useState(null)
   const [alert, setAlert] = useState(null)
   const [success, setSuccess] = useState(null)
@@ -28,14 +28,14 @@ function Aviatorsettings() {
   
               const result = await response.json();
               await setUploaded(true)
-              await fetch("https://moccha77-fbe81-default-rtdb.firebaseio.com/aviator.json", {
+              await fetch("https://moccha77-fbe81-default-rtdb.firebaseio.com/highflyer.json", {
                   method: "PUT",
                   headers: {
                       'Content-Type': 'application/json',
                   },
                   body: JSON.stringify({ ...data, file_id: result.fileName })
               })
-              const responses = await fetch("https://moccha77-fbe81-default-rtdb.firebaseio.com/aviator.json")
+              const responses = await fetch("https://moccha77-fbe81-default-rtdb.firebaseio.com/highflyer.json")
               const data1 = await responses.json()
               setData(data1)
           } catch (error) {
@@ -53,7 +53,7 @@ function Aviatorsettings() {
       useEffect(() => {
           const fetchData = async () => {
               try {
-                  const response = await fetch("https://moccha77-fbe81-default-rtdb.firebaseio.com/aviator.json")
+                  const response = await fetch("https://moccha77-fbe81-default-rtdb.firebaseio.com/highflyer.json")
                   const data = await response.json()
                   setData(data)
               } catch (error) {
@@ -91,13 +91,13 @@ function Aviatorsettings() {
     }
     const handlecheck = async () => {
         try{
-            if(isNaN(Number(data.aviator_1)) || isNaN(Number(data.aviator_2)) || isNaN(Number(data.aviator_3)) || isNaN(Number(data.aviator_4)) || isNaN(Number(data.aviator_5))){
+            if(isNaN(Number(data.highflyer_1)) || isNaN(Number(data.highflyer_2)) || isNaN(Number(data.highflyer_3)) || isNaN(Number(data.highflyer_4)) || isNaN(Number(data.highflyer_5))){
                 setAlert("❌ Doğru Ədəd Daxil Et!")
                 setTimeout(() => {
                     setAlert(null)
                 }, 3000);
             }else{
-                await fetch("https://moccha77-fbe81-default-rtdb.firebaseio.com/aviator.json", {
+                await fetch("https://moccha77-fbe81-default-rtdb.firebaseio.com/highflyer.json", {
                     method: "PUT",
                     headers: {
                         'Content-Type': 'application/json',
@@ -117,7 +117,7 @@ function Aviatorsettings() {
     <div className='settings'>
       {alert ? (<div className='alert-danger alert'>{alert}</div>) : (null)}
             {success ? (<div className='alert-success alert'>{success}</div>) : (null)}
-            <h2 className='mt-2'>Aviator</h2>
+            <h2 className='mt-2'>High Flyer</h2>
             {data?(
               <div className='container'>
                 {data.file_id != "" ? (
@@ -138,24 +138,24 @@ function Aviatorsettings() {
                     ) : (null)}
                     <form onSubmit={handleSubmit} className='form form-control py-4 px-3 shadow mt-2'>
                         <div className='mb-3 border p-2'>
-                            <label htmlFor="aviator_1" className='form-label'>1 Ci Uçuş</label>
-                            <input type="text" value={data.aviator_1} name='aviator_1' id='aviator_1' className='form-control' onChange={handleChange} />
+                            <label htmlFor="highflyer_1" className='form-label'>1 Ci Uçuş</label>
+                            <input type="text" value={data.highflyer_1} name='highflyer_1' id='highflyer_1' className='form-control' onChange={handleChange} />
                         </div>
                         <div className='mb-3 border p-2'>
-                            <label htmlFor="aviator_2" className='form-label'>2 Ci Uçuş</label>
-                            <input type="text" value={data.aviator_2} name='aviator_2' id='aviator_2' className='form-control' onChange={handleChange} />
+                            <label htmlFor="highflyer_2" className='form-label'>2 Ci Uçuş</label>
+                            <input type="text" value={data.highflyer_2} name='highflyer_2' id='highflyer_2' className='form-control' onChange={handleChange} />
                         </div>
                         <div className='mb-3 border p-2'>
-                            <label htmlFor="aviator_3" className='form-label'>3 Cü Uçuş</label>
-                            <input type="text" value={data.aviator_3} name='aviator_3' id='aviator_3' className='form-control' onChange={handleChange} />
+                            <label htmlFor="highflyer_3" className='form-label'>3 Cü Uçuş</label>
+                            <input type="text" value={data.highflyer_3} name='highflyer_3' id='highflyer_3' className='form-control' onChange={handleChange} />
                         </div>
                         <div className='mb-3 border p-2'>
-                            <label htmlFor="aviator_4" className='form-label'>4 Cü Uçuş</label>
-                            <input type="text" value={data.aviator_4} name='aviator_4' id='aviator_4' className='form-control' onChange={handleChange} />
+                            <label htmlFor="highflyer_4" className='form-label'>4 Cü Uçuş</label>
+                            <input type="text" value={data.highflyer_4} name='highflyer_4' id='highflyer_4' className='form-control' onChange={handleChange} />
                         </div>
                         <div className='mb-3 border p-2'>
-                            <label htmlFor="aviator_5" className='form-label'>5 Ci Uçuş</label>
-                            <input type="text" value={data.aviator_5} name='aviator_5' id='aviator_5' className='form-control' onChange={handleChange} />
+                            <label htmlFor="highflyer_5" className='form-label'>5 Ci Uçuş</label>
+                            <input type="text" value={data.highflyer_5} name='highflyer_5' id='highflyer_5' className='form-control' onChange={handleChange} />
                         </div>
                         <button className='mt-3 btn btn-primary'>Yadda Saxla</button>
                         
@@ -166,4 +166,4 @@ function Aviatorsettings() {
   )
 }
 
-export default Aviatorsettings
+export default Highflyersettings
