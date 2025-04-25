@@ -22,14 +22,27 @@ import Mrthimblerequests from './pages/Mrthimble/Mrthimblerequests';
 import Highflyersettings from './pages/Highflyer/Highflyersettings';
 import Highflyergame from './pages/Highflyer/Highflyergame';
 import Highflyerrequests from './pages/Highflyer/Highflyerrequests';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { IsLogIn } from './Redux/actions';
 
 
 function App() {
+  const dispatch = useDispatch()
+  useEffect(()=>{
+    const is_login = localStorage.getItem('is_login')
+    if(is_login){
+      dispatch(IsLogIn(true))
+    }
+    
+  },[])
+
   return (
       <Routes>
         <Route element={<PrivateRoute />}>
           <Route path='/login' element={<Login />} />
         </Route>
+
         <Route element={<PrivateRouteHome />}>
           <Route path='/' element={<Home/>}/>
 

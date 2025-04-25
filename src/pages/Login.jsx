@@ -21,6 +21,7 @@ function Login() {
             const data = await response.json()
             if((await data.email === formData.email) && (await data.password === formData.password)){
                 dispatch(IsLogIn(true))
+                localStorage.setItem('is_login', true);
             }else{
                 dispatch(IsLogIn(false))
             }
