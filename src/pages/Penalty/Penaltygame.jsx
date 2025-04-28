@@ -7,7 +7,7 @@ function Penaltygame() {
         try {
           const response = await fetch("https://moccha77-fbe81-default-rtdb.firebaseio.com/shoots.json")
           const data = await response.json()
-          setData(`https://back.mebera.az:30/video/${data.file_id}`)
+          setData(`https://back.moccha77.com/video/${data.file_id}`)
         } catch (error) {
           console.log(error)
         }
