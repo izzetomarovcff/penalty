@@ -7,7 +7,7 @@ function Mrthimblegame() {
         try {
           const response = await fetch("https://moccha77-fbe81-default-rtdb.firebaseio.com/mrthimble.json")
           const data = await response.json()
-          setData(`http://back.mebera.az:3000/video/${data.file_id}`)
+          setData(`https://back.mebera.az/video/${data.file_id}`)
         } catch (error) {
           console.log(error)
         }

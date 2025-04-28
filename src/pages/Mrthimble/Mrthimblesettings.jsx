@@ -21,7 +21,7 @@ function Mrthimblesettings() {
         formData.append("video", file);
         try {
             await setUploading(true)
-            const response = await fetch("http://back.mebera.az:3000/upload", {
+            const response = await fetch("https://back.mebera.az/upload", {
                 method: "POST",
                 body: formData,
             });
@@ -112,7 +112,7 @@ function Mrthimblesettings() {
                                 <img src="../../icon/close.svg" alt="" />
                             </div>
                             <video className="fullscreen-video" autoPlay muted loop>
-                                <source src={`http://back.mebera.az:3000/video/${data.file_id}`} type="video/mp4" />
+                                <source src={`https://back.mebera.az/video/${data.file_id}`} type="video/mp4" />
                             </video>
                         </div>
                     ) : (null)}
