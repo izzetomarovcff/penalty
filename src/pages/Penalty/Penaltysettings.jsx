@@ -21,7 +21,7 @@ function Penaltysettings() {
     formData.append("video", file);
     try {
       await setUploading(true)
-      const response = await fetch("https://back.moccha77.com/upload", {
+      const response = await fetch("https://back.mebera.az:30/upload", {
         method: "POST",
         body: formData,
       });
@@ -111,7 +111,7 @@ function Penaltysettings() {
               <img src="../../icon/close.svg" alt="" />
             </div>
             <video className="fullscreen-video" autoPlay muted loop>
-              <source src={`https://back.moccha77.com/video/${data.file_id}`} type="video/mp4" />
+              <source src={`https://back.mebera.az:30/video/${data.file_id}`} type="video/mp4" />
             </video>
           </div>
           ):(null)}
