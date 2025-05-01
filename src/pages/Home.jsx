@@ -4,7 +4,14 @@ import { Link } from 'react-router-dom'
 function Home() {
     return (
         <div className='home '>
-
+            <div className="technic">
+                <div className="text-center">
+                    <div className="spinner-border text-light mb-4">
+                    </div>
+                    <h2 className="fw-bold">Texniki Cəhətdən Baxış Keçirilir ...</h2>
+                    <p className="lead">Zəhmət Olmasa Bir Neçəd Dəqiqə Sonra Təkrar Yoxlayın</p>
+                </div>
+            </div>
             <div className="game card shadow imgdiv rounded">
                 <img src="image/penalty.jpg" alt="" className='rounded' />
 
@@ -19,7 +26,7 @@ function Home() {
                         İstəklər
                     </Link>
                 </div>
-                
+
 
             </div>
             <div className="game card shadow imgdiv rounded">
