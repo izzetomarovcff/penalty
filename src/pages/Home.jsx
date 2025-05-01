@@ -9,7 +9,7 @@ function Home() {
                     <div className="spinner-border text-light mb-4">
                     </div>
                     <h2 className="fw-bold">Texniki Cəhətdən Baxış Keçirilir ...</h2>
-                    <p className="lead">Zəhmət Olmasa Bir Neçəd Dəqiqə Sonra Təkrar Yoxlayın</p>
+                    <p className="lead">Zəhmət Olmasa Bir Neçə Dəqiqə Sonra Təkrar Yoxlayın</p>
                 </div>
             </div>
             <div className="game card shadow imgdiv rounded">
